@@ -1,0 +1,12 @@
+[
+    {
+        "last_used": "2024-02-29 08:26:21.205886",
+        "assistant_id": "asst_123456789",
+        "thread_id": "thread_987654321"
+    },
+    {
+        "last_used": "2024-02-28 19:02:40.248348",
+        "assistant_id": "asst_987654321",
+        "thread_id": "thread_123456789"
+    }
+]
