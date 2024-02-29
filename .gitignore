@@ -1,0 +1,4 @@
+*.log
+env
+session_log.json
+session.json
