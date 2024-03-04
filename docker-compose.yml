@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  disco-bot:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    command: ["python", "./disco-bot.py", "--previous"]
+    network_mode: "host"  
+    volumes:
+      - ./:/usr/src/app
+    deploy:
+      mode: global
+      replicas: 1
+      restart_policy:
+        condition: always
+    stdin_open: true
+    tty: true
