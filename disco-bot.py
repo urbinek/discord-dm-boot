@@ -122,7 +122,7 @@ def disco_dm():
             logger.info(question_msg)
 
             async with message.channel.typing():
-                response = await ask_gpt(openai_client, assistant_id, thread_id, f"{msg}")
+                response = await ask_gpt(openai_client, assistant_id, thread_id, f"{user}: {msg}")
 
             response_msg = json.dumps({"timestamp": f"{datetime.now()}", "assistant": f"{discord_client.user}", "response": response}, ensure_ascii=False)
             logger.info(response_msg)
